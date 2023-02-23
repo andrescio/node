@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <h2>Introducir valores de la operación</h2>
+    <div>
+        <form action="/" method="POST" id="formulario" name="formulario">
+            <label>id </label>
+            <input type="number" name="id" id="id" value="<%= id %>"/>
+            <br>
+            <br>
+            <label>Accion </label>
+            <select name="accion" required>
+                <option value="+">Sumar</option>
+                <option value="-">Restar</option>
+                <option value="*">Multiplicar</option>
+                <option value="/">Dividir</option>
+                <option value="R">Resetear</option>
+            </select>
+            <br>
+            <br>
+            <label>Number </label>
+            <input type="number" name="numero" id="numero">
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetear">
+        </form>
+    </div>
+</body>
+</html>
