@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
   });
 });
 
+// Colecciones que almacenan los datos de las operaciones realizadas hasta el momento (operaciones)
+// y una copia de las operaciones para compararlas cada minuto
 let operaciones = new Map();
 
 let comprobarOperaciones = new Map(operaciones);
@@ -89,9 +91,9 @@ setInterval(function() {
       operaciones.delete(key);
       console.log("borrado");
     }
-    comprobarOperaciones = new Map(operaciones);
   }
-}, 60 * 1000);
+  comprobarOperaciones = new Map(operaciones);
+}, 10 * 1000);
 
 
 // about page
